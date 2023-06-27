@@ -20,4 +20,5 @@ renamed as (
 
 )
 
-select * from renamed
+select * from renamed 
+where order_date > cast('{{ var("start_date") }}' as date)

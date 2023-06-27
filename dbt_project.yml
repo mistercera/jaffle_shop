@@ -5,6 +5,10 @@ version: '0.1'
 
 profile: 'jaffle_shop'
 
+vars:
+  # The `start_date` variable will be accessible in all resources
+  start_date: "2018-01-05"
+
 model-paths: ["models"]
 seed-paths: ["seeds"]
 test-paths: ["tests"]
@@ -23,4 +27,5 @@ models:
   jaffle_shop:
       materialized: table
       staging:
-        materialized: view
+        materialized: table
+
